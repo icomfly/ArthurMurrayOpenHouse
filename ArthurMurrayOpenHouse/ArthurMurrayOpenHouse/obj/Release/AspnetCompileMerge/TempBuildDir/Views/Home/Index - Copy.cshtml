@@ -1,0 +1,49 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<link href="~/Content/jquery-ui-1.10.4.custom.css" rel="stylesheet" />
+
+@section scripts {
+
+    <script>
+
+        $(document).ready(function () {
+            debugger;
+            runEffect();
+        });
+
+        function runEffect() {
+            var sliderEffects = ["blind", "bounce", "clip", "drop", "explode", "fade", "fold", "highlight", "puff", "pulsate", "scale", "shake", "size", "slide", "transfer"];
+            //var sliderEffects = ["clip", "drop", "explode", "slide"];
+            var pickEffect = Math.floor(Math.random() * 15) + 1;
+            //var pickEffect = Math.floor(Math.random() * 3) + 1;
+            var selectedEffect = sliderEffects[pickEffect];
+
+            var options = {};
+            $("#slide1").hide();
+            $("#slide1").show(selectedEffect, 5000, callback);
+        }
+
+        // Callback function to bring a hidden box back
+        function callback() {
+            setTimeout(function () {
+                $("#slide1").removeAttr("style").fadeOut();
+            }, 5000);
+            runEffect();
+        };
+
+</script>
+
+}
+
+<ul style="list-style-type:none">
+    <li id="slide1" class="ui-widget-content" hidden>
+        <img src="~/Content/Images/arthur-murray-logo1.png" />
+    </li>
+</ul>
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4"></div>
+    <div class="col-md-4"></div>
+</div>
