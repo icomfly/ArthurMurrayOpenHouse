@@ -482,7 +482,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/03/2017 22:43:23</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>10/15/2017 02:19:19</publishTime>
+      <publishTime>10/15/2017 17:58:40</publishTime>
     </File>
     <File Include="Views/Shared/_LoginPartial.cshtml">
       <publishTime>10/14/2017 23:18:55</publishTime>
