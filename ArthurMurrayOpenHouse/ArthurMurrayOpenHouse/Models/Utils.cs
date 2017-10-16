@@ -8,25 +8,8 @@ namespace ArthurMurrayOpenHouse.Models
 {
     public class Utils
     {
-
-        public static void SendEmail(string email, string name)
+        public static void SendEmail(string email, string name, string phone)
         {
-            //SmtpClient smtpClient = new SmtpClient("mail.arthurmurrayopenhouse.com", 2525);
-
-            //smtpClient.Credentials = new System.Net.NetworkCredential("noreply@arthurmurrayopenhouse.com", "Srf#020385!");
-            //smtpClient.UseDefaultCredentials = true;
-            //smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
-            //smtpClient.EnableSsl = false;
-            //MailMessage mail = new MailMessage();
-            //mail.Body = "Test";
-
-            ////Setting From , To and CC
-            //mail.From = new MailAddress("noreply@arthurmurrayopenhouse.com", "Arthur Murray Open House");
-            //mail.To.Add(new MailAddress(email));
-            ////mail.CC.Add(new MailAddress("MyEmailID@gmail.com"));
-
-            //smtpClient.Send(mail);
-
             SmtpClient smtpClient = new SmtpClient("arthurmurrayopenhouse.com", 25);
 
             smtpClient.Credentials = new System.Net.NetworkCredential("noreply@arthurmurrayopenhouse.com", "Srf#020385!");
@@ -50,13 +33,33 @@ namespace ArthurMurrayOpenHouse.Models
                                 Thank you! <br/>
                                 Lincolnshire Arthur Murray
                                 </p>";
-
-            //Attachment attachment = new Attachment("arthurmurrayopenhouse.com/Content/Images/Invitation.JPG");
-            //mailMessage.Attachments.Add(attachment);
-
-
-
             smtpClient.Send(mailMessage);
+
+            //Now send email to our manager's email
+            mailMessage = new MailMessage("noreply@arthurmurrayopenhouse.com", "amlincolnshire@yahoo.com");
+
+            //mailMessage = new MailMessage("noreply@arthurmurrayopenhouse.com", "team@icomfly.com");
+
+
+            mailMessage.Subject = "Report about new invitation to Lincolnshire Arthur Murray Open House";
+            mailMessage.IsBodyHtml = true;
+            mailMessage.Body = @"<h1> Hi Arthur Murray Lincolnshire! </h1> <br/> 
+                                <p>
+                                New invitation to Lincolnshire Arthur Murray Open House October 20, 2017 event just was sent to:</p>  
+                                </p>
+                                <b>Name:</b> " + name +
+                                "</p><p>" +
+                                "<b>Phone:</b> " + phone +
+                                "</p><p>" +
+                                "<b>E-mail:</b> " + email +
+                                @"</p>
+                                <hr>
+                                <p>
+                                Thank you! <br/>
+                                Your Arthur Murray Open House web site
+                                </p>";
+            smtpClient.Send(mailMessage);
+
 
         }
     }
