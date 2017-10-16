@@ -232,6 +232,6 @@ C:\Projects\ArthurMurrayOpenHouse\ArthurMurrayOpenHouse\ArthurMurrayOpenHouse\bi
 C:\Projects\ArthurMurrayOpenHouse\ArthurMurrayOpenHouse\ArthurMurrayOpenHouse\bin\Microsoft.AI.ServerTelemetryChannel.xml
 C:\Projects\ArthurMurrayOpenHouse\ArthurMurrayOpenHouse\ArthurMurrayOpenHouse\bin\Microsoft.AI.WindowsServer.xml
 C:\Projects\ArthurMurrayOpenHouse\ArthurMurrayOpenHouse\ArthurMurrayOpenHouse\bin\Microsoft.AI.Web.xml
-C:\Projects\ArthurMurrayOpenHouse\ArthurMurrayOpenHouse\ArthurMurrayOpenHouse\obj\Debug\ArthurMurrayOpenHouse.csprojResolveAssemblyReference.cache
 C:\Projects\ArthurMurrayOpenHouse\ArthurMurrayOpenHouse\ArthurMurrayOpenHouse\obj\Debug\ArthurMurrayOpenHouse.dll
 C:\Projects\ArthurMurrayOpenHouse\ArthurMurrayOpenHouse\ArthurMurrayOpenHouse\obj\Debug\ArthurMurrayOpenHouse.pdb
+C:\Projects\ArthurMurrayOpenHouse\ArthurMurrayOpenHouse\ArthurMurrayOpenHouse\obj\Debug\ArthurMurrayOpenHouse.csprojResolveAssemblyReference.cache
